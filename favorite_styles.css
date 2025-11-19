@@ -1,0 +1,55 @@
+        body 
+        { /* Общие стили для всего тела страницы */
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('images_for_page/fone1.jpg');
+        }
+        .attic { /* Стили для верхнего колонтитула */
+            background-image: url(images_for_page/);
+            background: #673818;
+            color: #fff;
+            padding: 10px 0 10px 0;
+            text-align: center; 
+            font-size: 2.5em;
+            font-weight: bold;
+            letter-spacing: 2px; /* Расстояние между буквами */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .container { /* Стили для основного контейнера страницы */
+            display: flex; /* Используем Flexbox для расположения боковой панели и основного контента */
+            min-height: 70vh; /* Минимальная высота контейнера */
+        }
+        .side { /* Стили для боковой навигационной панели */
+            background: #f7ca18;
+            width: 250px;
+            padding: 30px 20px;
+            box-sizing: border-box;
+            font-size: 1.2em;
+            box-shadow: 2px 0 8px rgba(0,0,0,0.05);
+        }
+        .main {     /* Стили для основной области контента */
+            background-image: url('images_for_page/fone_for_main_page11.jpg');
+            flex: 1;
+            padding: 40px 30px;
+            font-size: 1.3em;
+        }
+        .basement { /* Стили для нижнего колонтитула */
+            background: #333;
+            background-image: url('images_for_page/fone_for_lower.jpg');
+            color: #fff;
+            text-align: center;
+            padding: 18px 0;
+            font-size: 1em;
+            letter-spacing: 1px;
+            box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
+        }
+
+        a { /* Стили для ссылок */
+            color: #d35400;
+            text-decoration: none;
+            display: block; /* Делает ссылки блочными элементами */
+            margin: 12px 0;
+        }
+        a:hover { /* Стили для ссылок при наведении :hover - эффект подчеркивания когда навелись мышкой*/
+            text-decoration: underline;
+        }
