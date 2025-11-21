@@ -1,55 +1,159 @@
-        body 
-        { /* Общие стили для всего тела страницы */
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-image: url('images_for_page/fone1.jpg');
-        }
-        .attic { /* Стили для верхнего колонтитула */
-            background-image: url(images_for_page/);
-            background: #673818;
-            color: #fff;
-            padding: 10px 0 10px 0;
-            text-align: center; 
-            font-size: 2.5em;
-            font-weight: bold;
-            letter-spacing: 2px; /* Расстояние между буквами */
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
-        .container { /* Стили для основного контейнера страницы */
-            display: flex; /* Используем Flexbox для расположения боковой панели и основного контента */
-            min-height: 70vh; /* Минимальная высота контейнера */
-        }
-        .side { /* Стили для боковой навигационной панели */
-            background: #f7ca18;
-            width: 250px;
-            padding: 30px 20px;
-            box-sizing: border-box;
-            font-size: 1.2em;
-            box-shadow: 2px 0 8px rgba(0,0,0,0.05);
-        }
-        .main {     /* Стили для основной области контента */
-            background-image: url('images_for_page/fone_for_main_page11.jpg');
-            flex: 1;
-            padding: 40px 30px;
-            font-size: 1.3em;
-        }
-        .basement { /* Стили для нижнего колонтитула */
-            background: #333;
-            background-image: url('images_for_page/fone_for_lower.jpg');
-            color: #fff;
-            text-align: center;
-            padding: 18px 0;
-            font-size: 1em;
-            letter-spacing: 1px;
-            box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
+/* Основные стили для сайта */
+        body {
+            font-family: Arial, sans-serif; /* Шрифт по умолчанию */
+            margin: 0; /* Убираем отступы */
+            padding: 0; /* Убираем padding */
+            background-image: url('images_for_page/backgrounds/Cut-High_main_page.png'); /* Путь к первому изображению */
+            background-size: contain; /* Покрыть весь экран */
+            background-position: center; /* Центрировать */
+            color: #fff; /* Цвет текста для читаемости, если фон темный */
+            display: flex; 
+            flex-direction: column;
+            min-height: 100vh;
         }
 
-        a { /* Стили для ссылок */
-            color: #d35400;
-            text-decoration: none;
-            display: block; /* Делает ссылки блочными элементами */
-            margin: 12px 0;
+        footer {
+        background-image: url('images_for_page/backgrounds/Full-Low_main_page.png'); /* Путь ко второму изображению */
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: #fff;
+        text-align: center;
+        /*position: relative;  Чтобы фон футера был поверх основного, если нужно */
+        min-height: 200px; /* Минимальная высота футера */
+        flex-shrink: 0;
+        position:  relative;
+	    left: 0;
+	    bottom: 0;
+	    width: 100%;
+	    height: 80px;
         }
-        a:hover { /* Стили для ссылок при наведении :hover - эффект подчеркивания когда навелись мышкой*/
-            text-decoration: underline;
+        
+        
+    
+        /* Стили для навигационного меню */
+        nav {
+            background-color: #f8f8f8; /* Светлый фон для меню */
+            padding: 10px; /* Отступы внутри меню */
+            text-align: center; /* Центрируем текст */
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+        }
+
+        nav a {
+            margin: 0 15px; /* Отступы между ссылками */
+            text-decoration: none; /* Убираем подчеркивание */
+            color: #333; /* Цвет текста */
+            font-weight: bold; /* Жирный шрифт */
+            cursor: pointer; /* Курсор как рука */
+        }
+
+        nav a:hover {
+            color: #ff6347; /* Цвет при наведении (томатный) */
+        }
+
+        /* Стили для секций */
+        section {
+            display: none; /* По умолчанию все секции скрыты */
+            padding: 20px; /* Отступы внутри секций */
+            max-width: 1200px; /* Максимальная ширина */
+            margin: 0 auto; /* Центрируем */
+        }
+
+        #home {
+            display: block; /* Главная секция видна по умолчанию */
+            text-align: center; /* Центрируем текст */
+        }
+
+        .blog-menu
+        { 
+            background-color: #fff;
+            image-resolution: 300dpi;
+            color: #333;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        
+        left-navigation-menu
+        {
+            background-color: #ffcc00;
+            bottom: 0;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            font-size: 14px;
+            justify-content: space-between;
+            left: 0;
+            position: fixed;
+            top: 74px;
+            width: 100px;
+            will-change: top;
+            /*z-index: 403;*/
+        }
+        
+
+        /* Стили для карточек пиццы */
+        .pizza-card {
+            border: 1px solid #ddd; /* Граница карточки */
+            border-radius: 8px; /* Закругленные углы */
+            padding: 15px; /* Отступы внутри */
+            margin: 10px; /* Отступы снаружи */
+            width: 300px; /* Ширина карточки */
+            display: inline-block; /* Рядом друг с другом */
+            text-align: center; /* Центрируем текст */
+            background-color: #fff; /* Белый фон */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Тень для объема */
+        }
+
+        .pizza-card img {
+            width: 100%; /* Ширина изображения 100% */
+            height: auto; /* Авто высота */
+            border-radius: 8px; /* Закругленные углы */
+        }
+
+        .pizza-card button {
+            background-color: #ff6347; /* Томатный цвет кнопки */
+            color: white; /* Белый текст */
+            border: none; /* Без границы */
+            padding: 10px; /* Отступы */
+            cursor: pointer; /* Курсор рука */
+            margin-top: 10px; /* Отступ сверху */
+        }
+
+        .pizza-card button:hover {
+            background-color: #e5533d; /* Темнее при наведении */
+        }
+
+        /* Стили для корзины */
+        #cart-items {
+            list-style: none; /* Убираем маркеры списка */
+            padding: 0; /* Убираем padding */
+        }
+
+        #cart-items li {
+            border-bottom: 1px solid #ddd; /* Граница снизу */
+            padding: 10px; /* Отступы */
+            display: flex; /* Flex для выравнивания */
+            justify-content: space-between; /* Разделяем элементы */
+            align-items: center; /* Выравниваем по центру */
+        }
+
+        #cart-items button {
+            background-color: #ff6347; /* Цвет кнопки удаления */
+            color: white; /* Белый текст */
+            border: none; /* Без границы */
+            padding: 5px 10px; /* Отступы */
+            cursor: pointer; /* Курсор рука */
+        }
+
+        #cart-items button:hover {
+            background-color: #e5533d; /* Темнее при наведении */
+        }
+
+        #total {
+            font-weight: bold; /* Жирный шрифт */
+            margin-top: 20px; /* Отступ сверху */
         }

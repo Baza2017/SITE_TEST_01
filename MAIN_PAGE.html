@@ -2,32 +2,98 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Main Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пиццерия - Продажа пиццы</title>
     <link rel="stylesheet" href="favorite_styles.css">
-    <script src="script_for_MAIN_PAGE.js" defer></script>
+    <script src="script_for_MAIN_PAGE.js"></script>
 </head>
 <body>
-    <div class="attic">
-            <img src="images_for_page/logo_image.png" alt="Freddy Fazber's Pizza Logo" width="200" height="170">
-            <!-- <p>Freddy Fazber's Pizza</p> -->   
-            
-    </div>
-    <div class="container">
-        <nav class="side">
-            <h2>Menu</h2>
-            <a href="#">Классические пиццы</a>
-            <a href="#">Фирменные пиццы</a>
-            <a href="#">Закуски и напитки</a>
-            <a href="#">Заказать онлайн</a>
-            <a href="#">Контакты</a>
-        </nav>
-        <main class="main">
-            <h1>Добро пожаловать в Freddy Fazber's Pizza!</h1>
-            
-        </main>
-    </div>
-    <footer class="basement">
-        &copy; 1984 Freddy Fazber's Intertament &mdash; Улица Кривоколенная, Дом 66 &mdash; Телефон: +7 (999) 666-66-66
+
+    <!-- Навигационное меню -->
+    <nav>
+        <span><img src="images_for_page/logo_image.png" alt="Логотип" width="50" height="50" ></span>
+        <a onclick="showSection('home')">Главная</a> <!-- Ссылка на главную секцию -->
+        <a onclick="showSection('menu')">Меню</a> <!-- Ссылка на меню пицц -->
+        <a onclick="showSection('cart')">Корзина</a> <!-- Ссылка на корзину -->
+        <a onclick="showSection('contacts')">Контакты</a> <!-- Ссылка на контакты -->
+    </nav>
+
+    <left-navigation-menu>
+        <h1> Пицца-Плекс </h1>
+    </left-navigation-menu>
+
+    <!-- Секция: Главная -->
+    <section id="home">
+        <h1>Добро пожаловать в нашу пиццерию!</h1> <!-- Заголовок главной страницы -->
+        <p>Здесь вы можете заказать вкусную пиццу! P.S.Только не оставайтень на ночь в Пицца-Плексе</p> <!-- Описание -->
+
+        <div class="blog-menu"> 
+            <span><img src="images_for_page/blog-menu/blog-menu-1.png" alt="АФТОН ВЕРНУЛСЯ"></span>
+            <h1> Открытие Пицца-Плекса в вашем городе уже сегодня! </h1>
+            <p style="font-size: 20px;"> 
+                Мы рады сообщить об открытии новой нашей пиццерии "Пицца-Плекс"! <br> 
+                Теперь вы можете наслаждаться нашей ещё более вкусной пиццей!<br>
+                Закажите онлайн и получите скидку 10% на первый заказ! </p>
+            <p style="text-align: right;"><i>От 01-09-2021 Ванесса Афтон</i></p>
+        </div>
+
+        <div class="blog-menu"> 
+            <span><img src="images_for_page/blog-menu/blog-menu-1.png" alt="АФТОН ВЕРНУЛСЯ"></span>
+            <h1> Открытие Пицца-Плекса в вашем городе уже сегодня! </h1>
+            <p style="font-size: 20px;"> 
+                Мы рады сообщить об открытии новой нашей пиццерии "Пицца-Плекс"! <br> 
+                Теперь вы можете наслаждаться нашей ещё более вкусной пиццей!<br>
+                Закажите онлайн и получите скидку 10% на первый заказ! </p>
+            <p style="text-align: right;"><i>От 01-09-2021 Ванесса Афтон</i></p>
+        </div>
+
+    </section>
+
+    <!-- Секция: Меню пицц -->
+    <section id="menu">
+        <h1 style="text-align: center;">Наше меню</h1> <!-- Заголовок меню -->
+        <div class="pizza-card"> <!-- Карточка пиццы 1 -->
+            <img src="https://via.placeholder.com/300x200?text=Pizza+Margherita" alt="Пицца Маргарита"> <!-- Изображение (плейсхолдер) -->
+            <h2>Пицца Маргарита</h2> <!-- Название -->
+            <p>Классическая пицца с томатами, моцареллой и базиликом.</p> <!-- Описание -->
+            <p>Цена: 500 руб.</p> <!-- Цена -->
+            <button onclick="addToCart('Пицца Маргарита', 500)">Добавить в корзину</button> <!-- Кнопка добавления -->
+        </div>
+        <div class="pizza-card"> <!-- Карточка пиццы 2 -->
+            <img src="https://via.placeholder.com/300x200?text=Pizza+Pepperoni" alt="Пицца Пепперони"> <!-- Изображение -->
+            <h2>Пицца Пепперони</h2> <!-- Название -->
+            <p>Пицца с пепперони, моцареллой и томатным соусом.</p> <!-- Описание -->
+            <p>Цена: 600 руб.</p> <!-- Цена -->
+            <button onclick="addToCart('Пицца Пепперони', 600)">Добавить в корзину</button> <!-- Кнопка -->
+        </div>
+        <div class="pizza-card"> <!-- Карточка пиццы 3 -->
+            <img src="https://via.placeholder.com/300x200?text=Pizza+Four+Cheeses" alt="Пицца Четыре сыра"> <!-- Изображение -->
+            <h2>Пицца Четыре сыра</h2> <!-- Название -->
+            <p>Пицца с четырьмя видами сыра: моцарелла, горгонзола, пармезан, эмменталь.</p> <!-- Описание -->
+            <p>Цена: 700 руб.</p> <!-- Цена -->
+            <button onclick="addToCart('Пицца Четыре сыра', 700)">Добавить в корзину</button> <!-- Кнопка -->
+        </div>
+    </section>
+
+    <!-- Секция: Корзина -->
+    <section id="cart">
+        <h1>Ваша корзина</h1> <!-- Заголовок корзины -->
+        <ul id="cart-items"></ul> <!-- Список товаров в корзине -->
+        <p id="total">Итого: 0 руб.</p> <!-- Общая сумма -->
+    </section>
+
+    <!-- Секция: Контакты -->
+    <section id="contacts">
+        <h1>Контакты</h1> <!-- Заголовок контактов -->
+        <p>Адрес: ул. Раньше было лучше</p> <!-- Адрес -->
+        <p>Телефон: 1-555-FAZ-FAZBEAR</p> <!-- Телефон -->
+        <p>Email: AftonIalwaysComeBack</p> <!-- Email -->
+    </section>
+
+    <div>
+    <footer>
+        <p>&copy; 1987 Freddy Fazber's Intertament. Все права защищены.</p> <!-- Авторские права -->
     </footer>
+    </div>
 </body>
 </html>
