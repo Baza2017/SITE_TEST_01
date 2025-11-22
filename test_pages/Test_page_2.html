@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пицца и Аксессуары - Онлайн Магазин</title>
+    <style>
+        /* Основные стили с использованием указанных цветов */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #880cc2; /* Неоново-фиолетовый */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #c622f0; /* Розовый */
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #fae102; /* Жёлтый */
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .banner {
+            background-color: #e02209; /* Красный */
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            margin-bottom: 20px;
+        }
+
+        .banner h1 {
+            margin: 0;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .product-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 300px;
+            margin: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .product-card h3 {
+            color: #089cc9; /* Голубой */
+        }
+
+        .product-card .price {
+            font-size: 1.2em;
+            color: #e02209; /* Красный */
+            margin: 10px 0;
+        }
+
+        .product-card button {
+            background-color: #fae102; /* Жёлтый */
+            color: #880cc2; /* Неоново-фиолетовый */
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .product-card button:hover {
+            background-color: #c622f0; /* Розовый */
+            color: white;
+        }
+
+        footer {
+            background-color: #880cc2; /* Неоново-фиолетовый */
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #fae102; /* Жёлтый */
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #c622f0; /* Розовый */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать в Магазин Пиццы и Аксессуаров!</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Главная</a></li>
+            <li><a href="#menu">Меню</a></li>
+            <li><a href="#accessories">Аксессуары</a></li>
+            <li><a href="#promotions">Акции</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+            <li><a href="#cart" id="cart-link">Корзина</a></li> <!-- Заглушка для JS: id для хука -->
+        </ul>
+    </nav>
+
+    <main>
+        <section class="banner" id="home">
+            <h1>Закажите вкусную пиццу прямо сейчас!</h1>
+            <p>Свежие ингредиенты и быстрая доставка.</p>
+        </section>
+
+        <section id="menu">
+            <h2>Наше Меню Пиццы</h2>
+            <div class="products">
+                <div class="product-card">
+                    <img src="https://placekitten.com/300/200" alt="Пицца Маргарита"> <!-- Placeholder изображение -->
+                    <h3>Пицца Маргарита</h3>
+                    <p class="price">500 руб.</p>
+                    <button onclick="addToCart('margherita')">Добавить в корзину</button> <!-- Заглушка для JS: функция addToCart() будет в script.js -->
+                </div>
+                <div class="product-card">
+                    <img src="https://placekitten.com/300/200" alt="Пицца Пепперони">
+                    <h3>Пицца Пепперони</h3>
+                    <p class="price">600 руб.</p>
+                    <button onclick="addToCart('pepperoni')">Добавить в корзину</button>
+                </div>
+                <!-- Добавьте больше карточек по необходимости -->
+            </div>
+        </section>
+
+        <section id="accessories">
+            <h2>Аксессуары</h2>
+            <div class="products">
+                <div class="product-card">
+                    <img src="https://placekitten.com/300/200" alt="Форма для пиццы">
+                    <h3>Форма для пиццы</h3>
+                    <p class="price">300 руб.</p>
+                    <button onclick="addToCart('pizza-form')">Добавить в корзину</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://placekitten.com/300/200" alt="Нож для пиццы">
+                    <h3>Нож для пиццы</h3>
+                    <p class="price">200 руб.</p>
+                    <button onclick="addToCart('pizza-knife')">Добавить в корзину</button>
+                </div>
+                <!-- Добавьте больше карточек по необходимости -->
+            </div>
+        </section>
+
+        <section id="promotions">
+            <h2>Акции</h2>
+            <p>Скидка 20% на вторую пиццу!</p>
+        </section>
+
+        <section id="contacts">
+            <h2>Контакты</h2>
+            <p>Email: info@pizzashop.ru</p>
+            <p>Телефон: +7 (123) 456-78-90</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Магазин Пиццы и Аксессуаров. Все права защищены.</p>
+        <p><a href="#privacy">Политика конфиденциальности</a> | <a href="#terms">Условия использования</a></p>
+    </footer>
+
+    <!-- Заглушка для JavaScript: внешний файл -->
+    <script src="scripts.js"></script>
+</body>
+</html>

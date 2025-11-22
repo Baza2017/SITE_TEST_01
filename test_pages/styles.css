@@ -8,7 +8,7 @@ body {
     background-image: url('images_for_page/backgrounds/Cut-High_main_page.png'); /* Путь к первому изображению */
     background-size: contain; /* Покрыть весь экран */
     background-position: center; /* Центрировать */
-    color: #fff; /* Цвет текста для читаемости, если фон темный */
+    color: #000000; /* Цвет текста для читаемости, если фон темный */
     display: flex; 
     flex-direction: column;
     min-height: 100vh;
@@ -26,4 +26,40 @@ body {
 
 main {
     flex: 1;
+}
+/* Базовое состояние - скрыто */
+.popup {
+  opacity: 0;
+  pointer-events: none; /* не кликается */
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  transition: 0.3s ease;
+}
+
+/* Активное состояние — окно видно */
+.popup.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Содержимое */
+.popup-body {
+  background: #fff;
+  padding: 20px 25px;
+  border-radius: 8px;
+  min-width: 250px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  transform: scale(0.8);
+  transition: 0.3s ease;
+}
+
+.popup.active .popup-body {
+  transform: scale(1);
 }

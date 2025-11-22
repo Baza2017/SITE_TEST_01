@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пицца Просто - FNAF</title>
+    <link rel="stylesheet" href="pizza-prosto-style.css">
+    <script src="pizza-prosto.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+        <span><img src="images_for_page/logo-crashed.png" alt="Логотип" width="160" height="70" ></span>
+        <a onclick="showSection('home')">Главная</a> <!-- Ссылка на главную секцию -->
+        <a onclick="showSection('menu')">Меню</a> <!-- Ссылка на меню пицц -->
+        <a onclick="showSection('cart')">Корзина</a> <!-- Ссылка на корзину -->
+        <a onclick="showSection('contacts')">Контакты</a> <!-- Ссылка на контакты -->
+    </nav>
+    </header>
+
+    <main>
+        <section id = "pizzas" class = "for-section">
+            <article class="for-article">
+                <div style = "border: 1px solid #b7b7b7; border-radius: 8px;">
+                    <img src="images_for_page/Pizzas_foto/XXL_height.jfif" width="300" height="200" alt="Пицца заглушка">
+                </div>
+                <div class="for-article-div">
+                    <h3>Пицца пепперони созданная монахами из Италии.</h3>
+                    В древнем тосканском монастыре монахи создали необычную пиццу, <br> замешивая тесто на святом вине с лепестками лаванды, от чего каждый <br> её кусочек начинал мягко светиться в темноте.
+                </div>
+                <div id="food-modal" class="modal" aria-hidden="true">
+                    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="food-modal-title">
+                        <button class="modal-close" aria-label="Закрыть">&times;</button>
+                            <h2 id="food-modal-title">Описание пиццы</h2>
+                            <p id="food-modal-body">Здесь можно поместить подробное описание блюда.</p>
+                    </div>                              
+                </div>
+            </article>
+            <article class="for-article">
+                <div style = "border: 1px solid #b7b7b7; border-radius: 8px;">
+                    <img src="images_for_page/Pizzas_foto/XXL_height.jfif" width="300" height="200" alt="Пицца заглушка">
+                </div>
+                <div class="for-article-div">
+                    <h3>Пицца пепперони созданная монахами из Италии.</h3>
+                    В древнем тосканском монастыре монахи создали необычную пиццу, <br> замешивая тесто на святом вине с лепестками лаванды, от чего каждый <br> её кусочек начинал мягко светиться в темноте.
+                </div>
+                <div class="for-article-div">
+                    fffff
+                </div>
+            </article>
+            <article class="for-article">
+                <div style = "border: 1px solid #b7b7b7; border-radius: 8px;">
+                    <img src="images_for_page/Pizzas_foto/XXL_height.jfif" width="300" height="200" alt="Пицца заглушка">
+                </div>
+                <div class="for-article-div">
+                    <h3>Пицца пепперони созданная монахами из Италии.</h3>
+                    В древнем тосканском монастыре монахи создали необычную пиццу, <br> замешивая тесто на святом вине с лепестками лаванды, от чего каждый <br> её кусочек начинал мягко светиться в темноте.
+                </div>
+                <div class="for-article-div">
+                    fffff
+                </div>
+            </article>
+        </section>
+    </main>
+
+
+
+</body>
+</html>

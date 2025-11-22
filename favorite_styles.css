@@ -3,7 +3,8 @@
             font-family: Arial, sans-serif; /* Шрифт по умолчанию */
             margin: 0; /* Убираем отступы */
             padding: 0; /* Убираем padding */
-            background-image: url('images_for_page/backgrounds/Cut-High_main_page.png'); /* Путь к первому изображению */
+             /*background-image: url('images_for_page/backgrounds/Cut-High_main_page.png');  Путь к первому изображению */
+            background-color: rgb(210, 210, 210);
             background-size: contain; /* Покрыть весь экран */
             background-position: center; /* Центрировать */
             color: #fff; /* Цвет текста для читаемости, если фон темный */
@@ -13,20 +14,20 @@
         }
 
         footer {
-        background-image: url('images_for_page/backgrounds/Full-Low_main_page.png'); /* Путь ко второму изображению */
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-        color: #fff;
-        text-align: center;
-        /*position: relative;  Чтобы фон футера был поверх основного, если нужно */
-        min-height: 200px; /* Минимальная высота футера */
-        flex-shrink: 0;
-        position:  relative;
-	    left: 0;
-	    bottom: 0;
-	    width: 100%;
-	    height: 80px;
+            background-image: url('images_for_page/backgrounds/Full-Low_main_page.png'); /* Путь ко второму изображению */
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #fff;
+            text-align: center;
+            /*position: relative;  Чтобы фон футера был поверх основного, если нужно */
+            min-height: 200px; /* Минимальная высота футера */
+            flex-shrink: 0;
+            position:  relative;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 80px;
         }
         
         
@@ -34,6 +35,7 @@
         /* Стили для навигационного меню */
         nav {
             background-color: #f8f8f8; /* Светлый фон для меню */
+            position: static;
             padding: 10px; /* Отступы внутри меню */
             text-align: center; /* Центрируем текст */
             display: flex; 
@@ -53,9 +55,22 @@
             color: #ff6347; /* Цвет при наведении (томатный) */
         }
 
+        .name-section{
+            border: 1px solid #ddd; /* Граница карточки */
+            border-radius: 8px; /* Закругленные углы */
+            padding: 15px; /* Отступы внутри */
+            margin: 10px; /* Отступы снаружи */
+            width: 300px; /* Ширина карточки */
+            display: inline-block; /* Рядом друг с другом */
+            text-align: center; /* Центрируем текст */
+            background-color: gray; /* Белый фон */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Тень для объема */
+
+        }
+
         /* Стили для секций */
         section {
-            display: none; /* По умолчанию все секции скрыты */
+            display: block;
             padding: 20px; /* Отступы внутри секций */
             max-width: 1200px; /* Максимальная ширина */
             margin: 0 auto; /* Центрируем */
@@ -93,7 +108,28 @@
             will-change: top;
             /*z-index: 403;*/
         }
+
         
+        .container {    /*https://doka-guide.vercel.app/css/flexbox-guide/*/
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: space-around; 
+            align-items: stretch;
+
+            width: 100%;
+            height: 100%;
+
+        }
+    
+        .item {
+            flex: 0 1 auto;
+        }
+        /*
+        .right-card
+        {
+           
+        } */
 
         /* Стили для карточек пиццы */
         .pizza-card {
@@ -104,7 +140,19 @@
             width: 300px; /* Ширина карточки */
             display: inline-block; /* Рядом друг с другом */
             text-align: center; /* Центрируем текст */
-            background-color: #fff; /* Белый фон */
+            background-color: gray; /* Белый фон */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Тень для объема */
+        }
+
+        .card-little {
+            border: 1px solid #ddd; /* Граница карточки */
+            border-radius: 8px; /* Закругленные углы */
+            padding: 2px; /* Отступы внутри */
+            margin: 5px; /* Отступы снаружи */
+            width: 50px; /* Ширина карточки */
+            display: block; /* Рядом друг с другом */
+            text-align: center; /* Центрируем текст */
+            background-color: rebeccapurple; /* Белый фон */
             box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Тень для объема */
         }
 
