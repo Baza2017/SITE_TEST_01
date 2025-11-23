@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Пицца Просто - FNAF</title>
+    <title>Пицца Просто - Pizza-Prosto </title>
     <link rel="stylesheet" href="pizza-prosto-style.css">
     <script src="pizza-prosto.js"></script>
 </head>
@@ -11,59 +11,202 @@
     <header>
         <nav>
         <span><img src="images_for_page/logo-crashed.png" alt="Логотип" width="160" height="70" ></span>
-        <a onclick="showSection('home')">Главная</a> <!-- Ссылка на главную секцию -->
-        <a onclick="showSection('menu')">Меню</a> <!-- Ссылка на меню пицц -->
-        <a onclick="showSection('cart')">Корзина</a> <!-- Ссылка на корзину -->
-        <a onclick="showSection('contacts')">Контакты</a> <!-- Ссылка на контакты -->
+        <a href = "pizza-prosto.html">Главная</a> <!-- Ссылка на главную секцию -->
+        <!--<a onclick="showSection('pizzas')">Корзина</a> --> <!-- Ссылка на меню пицц -->
+        <a href = "pizza-prosto-blog.html">Новости</a> <!-- Ссылка на меню пицц -->
+        <a href = "pizza-prosto-about-pizza.html">О нас</a> <!-- Ссылка на контакты -->
+        <a href = "deadline.html">Авторизация</a> <!-- Ссылка на контакты -->
     </nav>
     </header>
 
+    
     <main>
         <section id = "pizzas" class = "for-section">
+            <h1>Пиццы</h1>
             <article class="for-article">
                 <div style = "border: 1px solid #b7b7b7; border-radius: 8px;">
                     <img src="images_for_page/Pizzas_foto/XXL_height.jfif" width="300" height="200" alt="Пицца заглушка">
                 </div>
                 <div class="for-article-div">
-                    <h3>Пицца пепперони созданная монахами из Италии.</h3>
+                    <h3>Пицца Монастырская созданная монахами из Италии.</h3>
                     В древнем тосканском монастыре монахи создали необычную пиццу, <br> замешивая тесто на святом вине с лепестками лаванды, от чего каждый <br> её кусочек начинал мягко светиться в темноте.
                 </div>
-                <div id="food-modal" class="modal" aria-hidden="true">
-                    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="food-modal-title">
-                        <button class="modal-close" aria-label="Закрыть">&times;</button>
-                            <h2 id="food-modal-title">Описание пиццы</h2>
-                            <p id="food-modal-body">Здесь можно поместить подробное описание блюда.</p>
-                    </div>                              
+                <div>
+                    <button onclick="showPopop('about-pizza-1')">Подробнее</button>                            
+                </div>
+                <div class="pizza-prise-but">
+                    <p>Цена: 500Р</p>
+                    <button  onclick="addToCart('Пицца Монастырская', 500)">В корзину</button>
                 </div>
             </article>
+
             <article class="for-article">
                 <div style = "border: 1px solid #b7b7b7; border-radius: 8px;">
-                    <img src="images_for_page/Pizzas_foto/XXL_height.jfif" width="300" height="200" alt="Пицца заглушка">
+                    <img src="images_for_page/Pizzas_foto/pizza2-PIVO.jpeg" width="300" height="200" alt="Пицца заглушка">
                 </div>
                 <div class="for-article-div">
-                    <h3>Пицца пепперони созданная монахами из Италии.</h3>
-                    В древнем тосканском монастыре монахи создали необычную пиццу, <br> замешивая тесто на святом вине с лепестками лаванды, от чего каждый <br> её кусочек начинал мягко светиться в темноте.
+                    <h3>Пицца Пивная созданная поваром Витей в гаражах</h3>
+                    Как не удивительно, но основной ингридиет - это пиво! <br> Пиво придаёт тесту особую воздушность и хрустящую корочку, <br> а сыр с беконом создают неповторимый вкус.                
                 </div>
-                <div class="for-article-div">
-                    fffff
+                <div>
+                    <button onclick="showPopop('about-pizza-2')">Подробнее</button>                            
+                </div>
+                <div class="pizza-prise-but">
+                    <p>Цена: 600Р</p>
+                    <button  onclick="addToCart('Пицца Пивная', 600)">В корзину</button>
                 </div>
             </article>
+            
             <article class="for-article">
                 <div style = "border: 1px solid #b7b7b7; border-radius: 8px;">
-                    <img src="images_for_page/Pizzas_foto/XXL_height.jfif" width="300" height="200" alt="Пицца заглушка">
+                    <img src="images_for_page/Pizzas_foto/pizza3-Byian.jpeg" width="300" height="200" alt="Пицца заглушка">
                 </div>
                 <div class="for-article-div">
-                    <h3>Пицца пепперони созданная монахами из Италии.</h3>
-                    В древнем тосканском монастыре монахи создали необычную пиццу, <br> замешивая тесто на святом вине с лепестками лаванды, от чего каждый <br> её кусочек начинал мягко светиться в темноте.
+                    <h3>Пицца Грибная с грибами с Буяна</h3>
+                    В данной пицце используются грибы с острова Буяна<br> 
+                    Грибы росли в волшебном лесу, где каждое утро<br>
+                    их поливали Русы для борьбы с Ящерами
+                </div>  
+                <div>
+                    <button onclick="showPopop('about-pizza-3')">Подробнее</button>                            
                 </div>
-                <div class="for-article-div">
-                    fffff
+                <div class="pizza-prise-but">
+                    <p>Цена: 777Р</p>
+                    <button  onclick="addToCart('Пицца Грибная', 777)">В корзину</button>
+                </div>
+            </article>
+            
+        </section>
+
+        <section id = "snacks" class="for-section-other">
+            <h1>Закуски</h1>
+            <article class="for-article-other">
+                <div class="for-article-div-other">
+                    <img src="images_for_page/Snacks_Foto/snacks-1-Potato-free.jpeg" width= 150 height="150">
+                    <h3>Картофель фри</h3>
+                    <p>Цена: 150Р</p>
+                    <button  onclick="addToCart('Картофель фри', 150)">В корзину</button>
+                </div>
+
+                <div class="for-article-div-other">
+                    <img src="images_for_page/Snacks_Foto/snacks-2-Nuggets.jpeg" width= 170 height="150">
+                    <h3>Куриные наггетсы</h3>
+                    <p>Цена: 250Р</p>
+                    <button style="margin-left: 10px;" onclick="addToCart('Куриные наггетсы', 250)">В корзину</button>
+                </div>
+
+                <div class="for-article-div-other" >
+                    <img src="images_for_page/Snacks_Foto/snacks-3-Cheese_chips.jpeg" width= 170 height="150">
+                    <h3>Сырные чипсы</h3>
+                    <p>Цена: 150Р</p>
+                    <button  onclick="addToCart('Сырные чипсы', 150)">В корзину</button>
                 </div>
             </article>
         </section>
+
+        <section id = "drink" class="for-section-other">
+            <h1>Напитки</h1>
+            <article class="for-article-other">
+                <div class="for-article-div-other">
+                    <img src="images_for_page/Drinks_photo/Drink-1-kompot.jpeg" width= 150 height="150">
+                    <h3>Компот</h3>
+                    <p>Цена: 350Р</p>
+                    <button onclick="addToCart('Компот', 350)">В корзину</button>
+                </div>
+
+                <div class="for-article-div-other">
+                    <img src="images_for_page/Drinks_photo/Drink-2-Limonad.jpeg" width= 170 height="150">
+                    <h3>Лимонад</h3>
+                    <p>Цена: 250Р</p>
+                    <button style="margin-left: 10px;" onclick="addToCart('Лимонад', 250)">В корзину</button>
+                </div>
+
+                <div class="for-article-div-other" >
+                    <img src="images_for_page/Drinks_photo/Drink-3-Blue-Loguune.jpeg" width= 170 height="150">
+                    <h3>Голубая лагуна</h3>
+                    <p>Цена: 350Р</p>
+                    <button onclick="addToCart('Голубая Лагуна', 350)">В корзину</button>
+                </div>
+            </article>
+        </section>
+
+        <a style="text-align: center; text-decoration: none; color: black; font-weight: bold; left: 50%; bottom: 0;" href="#top">Наверх</a></div>
     </main>
 
+    
+
+    <div class="left-navigation-menu">
+        <div>
+            <a href="#pizzas">
+                <img src="images_for_page/for-left-menu/pizza-svgrepo-com (1).svg" width="70" height="70">
+            </a>
+            <a href="#pizzas">Пицца</a>
+        </div>
+        <div>
+            <a href="#snacks">
+                <img src="images_for_page/for-left-menu/snacks-popcorn-svgrepo-com.svg" width="65" height="60">
+            </a>
+            <a href="#snacks">Снеки</a>
+        </div>
+        <div>
+            <a href="#drink">
+                <img src="images_for_page/for-left-menu/drink-svgrepo-com.svg" width="65" height="60">
+            </a>
+            <a href="#drink">Напитки</a>
+        </div>
+    </div>
 
 
+
+
+
+
+
+
+
+
+    <div id = "about-pizza-1" class = "popup">
+        <div  class="flex-conteiner">
+        <div>
+            <img class = "close-btn" src = "modalCross.svg" onclick="closePopup()">
+       </div>
+       <h1>Пицца Монастырская Итальянская</h1>
+       <p>Состав: Тесто для пиццы (пшеничная мука,вода,дрожжи,оливковое масло,соль);Томатный соус (помидоры,чеснок,базилик,оливковое масло); Сыр моцарелла;Овощи (помидоры черри,болгарский перец,шампиньоны,маслины);Травы и специи (орегано,базилик,черный перец). </p>
+       <p>Калорийность 100 гр - 340 ккал.</p>
+    </div>
+    </div>
+
+    <div id = "about-pizza-2" class = "popup">
+        <div class="flex-conteiner">
+        <div>
+            <img class = "close-btn" src = "modalCross.svg" onclick="closePopup()">
+       </div>
+       <h1>Пицца Пивная</h1>
+       <p>Состав: МНОГО ПИВА, Тесто для пиццы (пшеничная мука,вода,дрожжи,оливковое масло,соль);Томатный соус (помидоры,чеснок,базилик,оливковое масло); Сыр карачаевский; Овощи (помидоры черри,болгарский перец,шампиньоны,маслины);Травы и специи (орегано,базилик,черный перец). </p>
+       <p>Калорийность 100 гр - 999 ккал.</p>
+    </div>
+    </div>
+
+    <div id = "about-pizza-3" class = "popup">
+        <div class="flex-conteiner">
+        <div>
+            <img class = "close-btn" src = "modalCross.svg" onclick="closePopup()">
+       </div>
+       <h1>Пицца Грибная Буяновская</h1>
+       <p>Состав: Буянские Грибы, Тесто для пиццы (пшеничная мука,вода,дрожжи,оливковое масло,соль);Томатный соус (помидоры,чеснок,базилик,оливковое масло); Сыр карачаевский; Овощи (помидоры черри,болгарский перец,шампиньоны,маслины);Травы и специи (орегано,базилик,черный перец). </p>
+       <p>Калорийность 100 гр - 100 ккал.</p>
+    </div>
+    </div>
+
+    <!--<section id="cart">
+        <h1>Ваша корзина</h1> 
+        <ul id="cart-items"></ul> 
+        <p id="total">Итого: 0 руб.</p> 
+        <button onclick="removeFromCart(all)">ffffff</button>
+    </section> -->
+
+    <footer class="for-footer">
+        <p>&copy; 2025 Pizza-Prosto. Все права забыты. Создано А.А.Р. в рамках зачёта по Вёрстке</p>
+    </footer>
 </body>
 </html>
