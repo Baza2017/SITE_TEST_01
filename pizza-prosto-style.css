@@ -24,16 +24,16 @@ nav {
         }
 
 nav a {
-            margin: 0 15px; /* Отступы между ссылками */
-            text-decoration: none; /* Убираем подчеркивание */
-            color: #333; /* Цвет текста */
-            font-weight: bold; /* Жирный шрифт */
+            margin: 0 15px; 
+            text-decoration: none; 
+            color: #333; 
+            font-weight: bold; 
             cursor: pointer; /* Курсор как рука */
         }
 
         
 nav a:hover {
-            color: violet; /* Цвет при наведении (томатный) */
+            color: violet;
         }
 
 
@@ -164,7 +164,7 @@ body {
             border-radius: 8px 0 0 8px;}
            
             .for-article-other button {
-                background-color: #969696; /* Зеленый */
+                background-color: #969696;
                 border: none;
                 color: white;
                 padding: 10px 24px;
@@ -226,7 +226,7 @@ body {
     }*/
 
     .for-article button {
-        background-color: #969696; /* Зеленый */
+        background-color: #969696;
         border: none;
         color: white;
         padding: 10px 24px;
@@ -344,10 +344,10 @@ body {
             font-family: 'Arial Black', Gadget, sans-serif;
     }
     .left-navigation-menu a {
-            text-decoration: none; /* Убираем подчеркивание */
-            color: #000000; /* Цвет текста */
-            font-weight: bold; /* Жирный шрифт */
-            cursor: pointer; /* Курсор как рука */
+            text-decoration: none; 
+            color: #000000;
+            font-weight: bold; 
+            cursor: pointer;
         }
 
 
