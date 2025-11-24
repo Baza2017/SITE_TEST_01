@@ -66,3 +66,33 @@
      
               document.getElementById('total').textContent = `Итого: ${total} руб.`;
           }
+
+          document.addEventListener('DOMContentLoaded', () => {
+            const loginForm = document.getElementById('loginForm');
+            const usernameInput = document.getElementById('username');
+            const passwordInput = document.getElementById('password');
+            const messageDisplay = document.getElementById('message');
+            const CORRECT_USERNAME = 'test';
+            const CORRECT_PASSWORD = '1234';
+        
+            loginForm.addEventListener('submit', (event) => {
+                event.preventDefault();
+        
+                const enteredUsername = usernameInput.value;
+                const enteredPassword = passwordInput.value;
+        
+                
+                if (enteredUsername === CORRECT_USERNAME && enteredPassword === CORRECT_PASSWORD) {
+                    messageDisplay.textContent = `Авторизация успешна! Добро пожаловать, ${enteredUsername}!`;
+                    messageDisplay.className = 'message success';
+                    
+                    
+                } else {
+                    messageDisplay.textContent = 'Неверный логин или пароль.';
+                    messageDisplay.className = 'message error';
+                }
+        
+                usernameInput.value = '';
+                passwordInput.value = '';
+            });
+        });
